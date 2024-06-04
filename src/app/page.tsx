@@ -55,7 +55,9 @@ function BannerLinks() {
 }
 
 async function ProductCarousal() {
-   const res = await fetch('http://localhost:3000/api/get-banner-product').then((res) => res.json())
+   const res = await fetch(new URL('/api/get-banner-product', process.env.__NEXT_PRIVATE_ORIGIN)).then((res) =>
+      res.json()
+   )
    const data: Product[] = Array.isArray(res.products) ? res.products.slice(0, 5) : []
 
    return (
