@@ -1,4 +1,4 @@
-import { inter, poppins } from '@/app/layout'
+import { inter, poppins } from '@/fonts'
 import Link from 'next/link'
 import { BiCart, BiHeart, BiSearch } from 'react-icons/bi'
 
