@@ -26,3 +26,15 @@ body {
       text-wrap: balance;
    }
 }
+.hamburger div {
+   transition: all 0.3s ease;
+}
+.active-hamburger .l1 {
+   transform: rotate(45deg) translate(4px, 4px);
+}
+.active-hamburger .l2 {
+   opacity: 0;
+}
+.active-hamburger .l3 {
+   transform: rotate(-45deg) translate(4px, -4px);
+}

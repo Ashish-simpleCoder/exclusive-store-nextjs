@@ -8,6 +8,9 @@ dependencies:
    classic-react-components:
       specifier: ^0.1.0
       version: 0.1.0(react@18.3.1)
+   classic-react-hooks:
+      specifier: 1.0.0-beta.7
+      version: 1.0.0-beta.7(react@18.3.1)
    clsx:
       specifier: ^2.1.1
       version: 2.1.1
@@ -770,6 +773,16 @@ packages:
       resolution:
          { integrity: sha512-SFjCIFWl41Lv6q+YbtfoWuEmESfh2gGq90h1ZllPsKNj3yrzro/o3MC6JdVjGYvAupvTrNAPBbBTBSRyX/1H5Q== }
       engines: { node: '>=14' }
+      peerDependencies:
+         react: '>=16.8'
+      dependencies:
+         react: 18.3.1
+      dev: false
+
+   /classic-react-hooks@1.0.0-beta.7(react@18.3.1):
+      resolution:
+         { integrity: sha512-6QzmTxyMwuzmiHCW3S4Sg8/eVk9HzNwqO9wPlBHIvv2f8IlCgYJHur+EU720C5WcJnvBoDkXhmvRgjGNm4H/jQ== }
+      engines: { node: '>=16.14.0', pnpm: '>=8.12.0' }
       peerDependencies:
          react: '>=16.8'
       dependencies:
