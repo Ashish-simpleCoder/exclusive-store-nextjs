@@ -11,7 +11,7 @@ import Hamburger from '../ui/hamburger'
 import { AppLinks } from './header'
 
 export default function MobileHeader() {
-   const shouldDisplay = useWindowWidth(() => window.innerWidth < 768)
+   const shouldDisplay = useWindowWidth(() => window.innerWidth < 1024)
    const [shouldShowNav, setShouldNav] = useState(false)
    const [top, setTop] = useState(0)
 

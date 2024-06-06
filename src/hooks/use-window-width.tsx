@@ -6,6 +6,7 @@ export default function useWindowWidth(cb: () => boolean) {
 
    useOnMountEffect(() => setDisplay(cb))
 
+   // should allow to run callback on mount
    useEventListener(
       () => window,
       'resize',

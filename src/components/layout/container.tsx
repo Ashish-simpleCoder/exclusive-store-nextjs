@@ -4,7 +4,7 @@ import { ComponentProps } from 'react'
 export default function Container(props: ComponentProps<'div'>) {
    const { className, children, ...rest } = props
    return (
-      <div className={cn('container mx-auto px-2 md:px-[80px] xl:px-[135px]', className)} {...rest}>
+      <div className={cn('xl:container mx-auto px-2 md:px-[40px] xl:px-[120px]', className)} {...rest}>
          {children}
       </div>
    )

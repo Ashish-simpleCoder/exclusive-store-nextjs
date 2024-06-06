@@ -23,7 +23,7 @@ export default function Header() {
 
 export function AppLinks({ className }: { className?: string }) {
    return (
-      <div className={cn('links gap-12 hidden md:flex', className)}>
+      <div className={cn('links gap-4 lg:gap-12 hidden lg:flex', className)}>
          <Link href='/' className={poppins.className}>
             Home
          </Link>
@@ -42,7 +42,7 @@ export function AppLinks({ className }: { className?: string }) {
 
 export function CartActions({ className }: { className?: string }) {
    return (
-      <div className={cn('actions gap-6 hidden md:flex', className)}>
+      <div className={cn('actions gap-2 lg:gap-6 hidden lg:flex', className)}>
          <div className='relative '>
             <input
                type='text'
