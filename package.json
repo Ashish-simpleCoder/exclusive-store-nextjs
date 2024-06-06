@@ -19,6 +19,7 @@
       "react-error-boundary": "^4.0.13",
       "react-icons": "^5.2.1",
       "react-responsive-carousel": "^3.2.23",
+      "sharp": "^0.33.4",
       "tailwind-merge": "^2.3.0"
    },
    "devDependencies": {
