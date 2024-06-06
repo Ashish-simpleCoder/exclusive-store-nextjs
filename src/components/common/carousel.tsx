@@ -25,6 +25,7 @@ export default function Carousel({ items }: { items: Array<any> }) {
                </div>
             )
          }}
+         showThumbs={false}
       >
          {items}
       </AppCarousel>
