@@ -4,7 +4,7 @@ import { HiOutlineMagnifyingGlass, HiOutlineHeart, HiOutlineShoppingCart } from 
 
 import Container from './container'
 import MobileHeader from './mobile-header'
-import cn from '@/lib/cn'
+import cn from '@lib/cn'
 
 export default function Header() {
    return (
