@@ -10,7 +10,7 @@ export default function Container<Tag extends keyof HTMLElementTagNameMap = 'div
    return (
       <>
          {/* @ts-ignore */}
-         <Tag className={cn('xl:container mx-auto px-2 md:px-[40px] xl:px-[120px]', className)} {...(rest as any)}>
+         <Tag className={cn('xl:container mx-auto px-6 md:px-[40px] xl:px-[120px]', className)} {...(rest as any)}>
             {children}
          </Tag>
       </>

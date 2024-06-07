@@ -8,7 +8,7 @@ import cn from '@lib/cn'
 
 export default function Header() {
    return (
-      <header className=' border-b-[1px] relative'>
+      <header className='border-b-[1px] relative'>
          <Container className='pt-7 lg:pt-[47px] pb-3 lg:pb-[27px] flex justify-between items-center'>
             <Link href='/' className={inter.className + ' font-bold text-2xl'}>
                Exclusive

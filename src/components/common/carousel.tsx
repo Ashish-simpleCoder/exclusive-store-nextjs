@@ -11,6 +11,8 @@ export default function Carousel({ items }: { items: Array<any> }) {
          showStatus={false}
          infiniteLoop={true}
          autoPlay={true}
+         showThumbs={false}
+         width={'100%'}
          renderIndicator={(onClick, isSelected, index, label) => {
             return (
                <div
@@ -25,7 +27,6 @@ export default function Carousel({ items }: { items: Array<any> }) {
                </div>
             )
          }}
-         showThumbs={false}
       >
          {items}
       </AppCarousel>

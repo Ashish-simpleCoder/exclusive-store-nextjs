@@ -8,18 +8,19 @@ import { BsArrowRight } from 'react-icons/bs'
 import { Product } from './api/get-banner-product/route'
 import AppErrorBoundary from '@/components/wrapper/app-error-boundary'
 import { inter, poppins } from '@/fonts'
+import Container from '@/components/layout/container'
 
 export const dynamic = 'force-dynamic'
 
 export default function Home() {
    return (
       <main className='flex min-h-screen flex-col items-center'>
-         <section className='home-banner container mx-auto px-[135px] flex py-10'>
+         <Container as='section' className='home-banner max-xl:w-full flex max-lg:flex-col-reverse py-10'>
             <BannerLinks />
             <AppErrorBoundary msg='Failed to load product banner. Please retry.'>
                <ProductCarousal />
             </AppErrorBoundary>
-         </section>
+         </Container>
       </main>
    )
 }
@@ -38,7 +39,7 @@ function BannerLinks() {
    ]
 
    return (
-      <div className='flex flex-col gap-4 border-r-[1px] pr-4 w-[13.5rem] flex-shrink-0'>
+      <div className='hidden lg:flex flex-col gap-4 border-r-[1px] pr-4 w-[13.5rem] flex-shrink-0'>
          {links.map((link) => {
             return (
                <Link
@@ -59,19 +60,29 @@ async function ProductCarousal() {
    const data: Product[] = Array.isArray(res.products) ? res.products.slice(0, 5) : []
 
    return (
-      <div className='product-carousal w-[calc(100%-13.5rem)] pl-10'>
+      <div className='product-carousal lg:w-[calc(100%-13.5rem)] lg:pl-10'>
          <Carousel
             items={data.map((p) => {
                return (
-                  <div key={p.id} className='w-full bg-black flex items-center px-16  h-[344px]'>
-                     <div className='info text-white text-left flex flex-col gap-5'>
+                  <div
+                     key={p.id}
+                     className='w-full bg-black flex max-md:flex-col-reverse max-md:pt-4 max-md:pb-10 items-center px-4 lg:px-16  md:h-[344px]'
+                  >
+                     <div className='info text-white text-left flex flex-col max-md:gap-2 gap-5 max-md:w-full'>
                         <h3 className={cn(poppins.className, 'flex gap-6 items-center')}>
                            <div className='w-10 h-12'>
                               <Image src={p.logo} width={40} height={48} alt='apple' />
                            </div>{' '}
                            {p.title}
                         </h3>
-                        <p className={cn(inter.className, 'font-semibold text-5xl leading-[60px]')}>{p.heading}</p>
+                        <p
+                           className={cn(
+                              inter.className,
+                              'font-semibold text-3xl lg:text-5xl leading-[40px] lg:leading-[60px]'
+                           )}
+                        >
+                           {p.heading}
+                        </p>
                         <div className={cn('flex items-center gap-2', poppins.className)}>
                            <Link href='' className='border-b-[1px] border-[#FAFAFA] leading-7'>
                               Shop Now{' '}
@@ -80,7 +91,7 @@ async function ProductCarousal() {
                         </div>
                      </div>
 
-                     <div className='w-[500px]'>
+                     <div className='w-[300px] lg:w-[500px]'>
                         <Image src={p.image} alt={p.title} width='500' height='300' objectFit='contain' />
                      </div>
                   </div>
