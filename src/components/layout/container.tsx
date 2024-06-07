@@ -1,11 +1,20 @@
 import cn from '@/lib/cn'
-import { ComponentProps } from 'react'
+import { ComponentProps, ComponentPropsWithRef, ComponentPropsWithoutRef } from 'react'
 
-export default function Container(props: ComponentProps<'div'>) {
-   const { className, children, ...rest } = props
+export default function Container<Tag extends keyof HTMLElementTagNameMap = 'div'>(
+   props: ComponentPropsWithoutRef<Tag> & { as?: Tag }
+) {
+   const { className, children, as = 'div', ...rest } = props
+   const Tag = as
+
    return (
-      <div className={cn('xl:container mx-auto px-2 md:px-[40px] xl:px-[120px]', className)} {...rest}>
-         {children}
-      </div>
+      <>
+         {/* @ts-ignore */}
+         <Tag className={cn('xl:container mx-auto px-2 md:px-[40px] xl:px-[120px]', className)} {...(rest as any)}>
+            {children}
+         </Tag>
+      </>
    )
 }
+
+// export default function Container(props: ComponentProps<keyof HTMLElementTagNameMap> & {As?: keyof JSX.IntrinsicElements}) {
