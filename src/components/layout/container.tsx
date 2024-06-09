@@ -1,5 +1,5 @@
 import cn from '@/lib/cn'
-import { ComponentProps, ComponentPropsWithRef, ComponentPropsWithoutRef } from 'react'
+import { ComponentPropsWithoutRef } from 'react'
 
 export default function Container<Tag extends keyof HTMLElementTagNameMap = 'div'>(
    props: ComponentPropsWithoutRef<Tag> & { as?: Tag }

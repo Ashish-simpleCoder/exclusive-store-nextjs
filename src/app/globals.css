@@ -38,3 +38,8 @@ body {
 .active-hamburger .l3 {
    transform: rotate(-45deg) translate(4px, -4px);
 }
+
+.swiper-button-disabled * {
+   opacity: 0.5;
+   cursor: not-allowed;
+}

@@ -12,6 +12,16 @@ const config: Config = {
             'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
             'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
          },
+         backgroundColor: {
+            red: {
+               secondary: '#DB4444',
+            },
+         },
+         colors: {
+            red: {
+               secondary: '#DB4444',
+            },
+         },
       },
    },
    plugins: [],

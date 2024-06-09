@@ -9,6 +9,8 @@ import { Product } from './api/get-banner-product/route'
 import AppErrorBoundary from '@/components/wrapper/app-error-boundary'
 import { inter, poppins } from '@/fonts'
 import Container from '@/components/layout/container'
+import Flex from '@/components/layout/flex'
+import FlashSaleSection from '@/components/page/home/flash-sale-section'
 
 export const dynamic = 'force-dynamic'
 
@@ -21,6 +23,9 @@ export default function Home() {
                <ProductCarousal />
             </AppErrorBoundary>
          </Container>
+         <Flex dir='col'>
+            <FlashSaleSection />
+         </Flex>
       </main>
    )
 }
