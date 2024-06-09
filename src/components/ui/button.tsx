@@ -21,10 +21,10 @@ export default function Button(props: ComponentProps<'button'> & { theme?: Theme
       <button
          className={cn(
             poppins.className,
-            'text-[#FAFAFA] text-base rounded-[0.25rem] px-12 py-4 hover:bg-opacity-70 hover:text-opacity-70',
+            'text-[#FAFAFA] text-sm lg:text-base rounded-[0.25rem] px-10 py-3 lg:px-12 lg:py-4 hover:bg-opacity-90 hover:text-opacity-90 transition-opacity',
             themes[theme],
             variant == 'outlined' && 'text-black border-[1px] border-black border-opacity-50',
-            size == 'sm' && 'py-[0.65rem]',
+            size == 'sm' && 'text-sm py-[0.40rem] lg:py-[0.65rem]',
             className
          )}
          {...rest}

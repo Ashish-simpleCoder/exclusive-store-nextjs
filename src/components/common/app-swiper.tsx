@@ -1,13 +1,14 @@
 'use client'
 import type { ComponentProps } from 'react'
+
+import type { CSSSelector } from 'swiper/types'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Navigation } from 'swiper/modules'
 
 import cn from '@/lib/cn'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { CSSSelector } from 'swiper/types'
 
 export const AppSwiperSlide = SwiperSlide
 
@@ -21,12 +22,26 @@ export default function AppSwiper(
 
    return (
       <Swiper
-         slidesPerView={4}
+         slidesPerView={1}
          spaceBetween={30}
          modules={[Navigation]}
          navigation={{
             nextEl: nextEl,
             prevEl: prevEl,
+         }}
+         breakpoints={{
+            640: {
+               slidesPerView: 2,
+               spaceBetween: 20,
+            },
+            768: {
+               slidesPerView: 3,
+               spaceBetween: 30,
+            },
+            1024: {
+               slidesPerView: 4,
+               spaceBetween: 30,
+            },
          }}
          className={cn('!flex !w-full', className)}
          {...rest}

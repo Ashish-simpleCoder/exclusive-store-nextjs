@@ -7,13 +7,14 @@ import Flex from '@components/layout/flex'
 import DecorationTag from '@components/ui/decoration-tag'
 import Container from '@components/layout/container'
 import { LeftArrow, RightArrow } from '@components/ui/right-arrow'
-import getFlashSaleProducts from '@/server-actions/get-flash-sale-products'
 import AppSwiper from '@components/common/app-swiper'
 import ProductCard from '@components/common/product-card'
 import Badge from '@components/ui/badge'
-import Star from '@/components/ui/star'
 import StarRating from '@/components/common/star-rating'
 import Button from '@/components/ui/button'
+
+// server actions
+import getFlashSaleProducts from '@/server-actions/get-flash-sale-products'
 
 export default function FlashSaleSection() {
    const { data } = useQuery({
@@ -41,7 +42,7 @@ export default function FlashSaleSection() {
             </div>
          </Flex>
 
-         <AppSwiper slidesPerView={4} nextEl={'.b2'} prevEl={'.b1'}>
+         <AppSwiper nextEl={'.b2'} prevEl={'.b1'}>
             {data?.map((item) => {
                return (
                   <ProductCard key={item.id} onCartClick={() => {}} product={item}>

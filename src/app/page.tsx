@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Carousel from '@/components/common/carousel'
 
 import { BsArrowRight } from 'react-icons/bs'
-import { Product } from './api/get-banner-product/route'
+import type { Product } from './api/get-banner-product/route'
 import AppErrorBoundary from '@/components/wrapper/app-error-boundary'
 import { inter, poppins } from '@/fonts'
 import Container from '@/components/layout/container'
@@ -71,7 +71,7 @@ async function ProductCarousal() {
                return (
                   <div
                      key={p.id}
-                     className='w-full bg-black flex max-md:flex-col-reverse max-md:pt-4 max-md:pb-10 items-center px-4 lg:px-16  md:h-[344px]'
+                     className='w-full bg-black flex max-md:flex-col-reverse max-md:pt-4 max-md:pb-10 items-center px-4 lg:px-16 md:h-[344px] md:justify-between'
                   >
                      <div className='info text-white text-left flex flex-col max-md:gap-2 gap-5 max-md:w-full'>
                         <h3 className={cn(poppins.className, 'flex gap-6 items-center')}>
