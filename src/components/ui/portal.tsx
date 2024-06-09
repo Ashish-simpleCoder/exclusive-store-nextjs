@@ -9,5 +9,5 @@ export default function Portal({
    node: Element | DocumentFragment | (() => Element)
 }) {
    if (typeof window == 'undefined') return null
-   return createPortal(children, node?.() || node)
+   return createPortal(children, typeof node == "function" ? node?.() : node)
 }
