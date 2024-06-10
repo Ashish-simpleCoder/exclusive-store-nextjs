@@ -5,6 +5,7 @@ import { HiOutlineMagnifyingGlass, HiOutlineHeart, HiOutlineShoppingCart } from 
 import Container from './container'
 import MobileHeader from './mobile-header'
 import cn from '@lib/cn'
+import VisuallyHidden from '../ui/visually-hidden'
 
 export default function Header() {
    return (
@@ -44,19 +45,27 @@ export function CartActions({ className }: { className?: string }) {
    return (
       <div className={cn('actions gap-2 lg:gap-6 hidden lg:flex', className)}>
          <div className='relative '>
+            <VisuallyHidden as='label' htmlFor='search-product-input'>
+               Search Product
+            </VisuallyHidden>
             <input
                type='text'
+               id='search-product-input'
                placeholder='What are you looking for?'
                className={poppins.className + ' rounded-md relative bg-[#F5F5F5] px-5 py-2 w-[243px] text-xs'}
             />
             <button className='absolute right-5 top-1/2 -translate-y-1/2'>
+               <VisuallyHidden>Search Product Button</VisuallyHidden>
                <HiOutlineMagnifyingGlass size='24' />
             </button>
          </div>
-         <button>
+
+         <button title='Wish List Items Page'>
+            <VisuallyHidden>Wish List Items Page</VisuallyHidden>
             <HiOutlineHeart size='24' />
          </button>
-         <button>
+         <button title='Cart Items Page'>
+            <VisuallyHidden>Cart Items Page</VisuallyHidden>
             <HiOutlineShoppingCart size='24' />
          </button>
       </div>
