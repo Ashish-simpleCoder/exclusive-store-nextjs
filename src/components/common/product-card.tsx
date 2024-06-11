@@ -6,7 +6,7 @@ import { poppins } from '@/fonts'
 import cn from '@/lib/cn'
 import { Product } from '@/types'
 import Image from 'next/image'
-import Button from '../ui/button'
+import Button from '../ui/button-3'
 import { ReactNode } from 'react'
 
 const Div = styled.div`

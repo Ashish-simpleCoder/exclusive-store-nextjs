@@ -1,5 +1,6 @@
 'use client'
 import { useQuery } from '@tanstack/react-query'
+import Link from 'next/link'
 import { inter } from '@/fonts'
 import cn from '@/lib/cn'
 
@@ -11,7 +12,7 @@ import AppSwiper from '@components/common/app-swiper'
 import ProductCard from '@components/common/product-card'
 import Badge from '@components/ui/badge'
 import StarRating from '@/components/common/star-rating'
-import Button from '@/components/ui/button'
+import Button from '@/components/ui/button-3'
 
 // server actions
 import getFlashSaleProducts from '@/server-actions/get-flash-sale-products'
@@ -55,7 +56,9 @@ export default function FlashSaleSection() {
          </AppSwiper>
 
          <div className='text-center mt-16'>
-            <Button>View All Products</Button>
+            <Button As={Link} href='/'>
+               View All Products
+            </Button>
          </div>
       </Container>
    )

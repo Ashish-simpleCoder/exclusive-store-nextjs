@@ -2,7 +2,7 @@
 
 import type { ReactNode } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
-import Button from '../ui/button'
+import Button from '../ui/button-3'
 
 export default function AppErrorBoundary({
    children,
