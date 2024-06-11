@@ -17,7 +17,7 @@ export const dynamic = 'force-dynamic'
 export default function Home() {
    return (
       <main className='flex min-h-screen flex-col items-center'>
-         <Container as='section' className='home-banner max-xl:w-full flex max-lg:flex-col-reverse py-10'>
+         <Container As='section' className='home-banner max-xl:w-full flex max-lg:flex-col-reverse py-10'>
             <BannerLinks />
             <AppErrorBoundary msg='Failed to load product banner. Please retry.'>
                <ProductCarousal />
