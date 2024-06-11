@@ -35,7 +35,7 @@ export default function ProductCard(props: {
             </div>
             <Button
                size='sm'
-               className='add-to-cart hidden absolute bottom-0 w-full bg-black text-white'
+               className='add-to-cart md:hidden absolute bottom-0 w-full bg-black text-white'
                onClick={props.onCartClick}
             >
                Add To Cart
