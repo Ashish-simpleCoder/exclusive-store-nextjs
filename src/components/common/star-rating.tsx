@@ -1,3 +1,6 @@
+// have taken reference from below article
+// https://dev.to/kartikbudhraja/creating-a-dynamic-star-rating-system-in-react-2c8
+
 import { useState } from 'react'
 import Star from '../ui/star'
 import cn from '@/lib/cn'
