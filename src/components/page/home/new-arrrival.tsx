@@ -29,7 +29,7 @@ export default function NewArrival() {
                      className='absolute bottom-0 left-1/2 -translate-x-1/2 max-lg:h-[270px] max-lg:w-unset'
                   />
                </div>
-               <div className='info-box mt-auto z-[1] pl-3 lg:pl-8 flex flex-col gap-3 lg:gap-4 mb-8'>
+               <div className='info-box mt-auto z-[1] pl-3 lg:pl-8 flex flex-col gap-3 lg:gap-4 mb-3 lg:mb-8'>
                   <h3 className={`${inter.className} font-semibold text-2xl tracking-[3%] leading-6 text-white`}>
                      PlayStation 5
                   </h3>
