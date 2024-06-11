@@ -14,7 +14,7 @@ function Container({ As: Component = 'div', ...props }) {
       <>
          <Component
             // @ts-ignore
-            className={cn('xl:container mx-auto px-3 md:px-[40px] xl:px-[120px]', className)}
+            className={cn('xl:container mx-auto px-3 md:px-[40px]', className)}
             {...rest}
          />
       </>
