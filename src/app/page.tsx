@@ -14,6 +14,7 @@ import FlashSaleSection from '@/components/page/home/flash-sale-section'
 import BestSellingProductsSection from '@/components/page/home/best-selling-product-section'
 import ProductCategory from '@/components/page/home/product-category'
 import NewArrival from '@/components/page/home/new-arrrival'
+import PerksSection from '@/components/page/home/perks-section'
 
 export const dynamic = 'force-dynamic'
 
@@ -31,6 +32,7 @@ export default function Home() {
             <ProductCategory />
             <BestSellingProductsSection />
             <NewArrival />
+            <PerksSection />
          </Flex>
       </main>
    )
