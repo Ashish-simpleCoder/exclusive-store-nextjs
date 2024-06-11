@@ -21,8 +21,6 @@ function Box({ As: Component = 'span', ...props }) {
 export default Box
 // export default function Container(props: ComponentProps<keyof HTMLElementTagNameMap> & {As?: keyof JSX.IntrinsicElements}) {
 
-
-
 // ---------------------        old implementiona -------------------------------
 // import cn from '@/lib/cn'
 // import { ComponentPropsWithoutRef } from 'react'

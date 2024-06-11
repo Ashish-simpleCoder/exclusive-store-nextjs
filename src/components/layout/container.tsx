@@ -14,7 +14,7 @@ function Container({ As: Component = 'div', ...props }) {
       <>
          <Component
             // @ts-ignore
-            className={cn('xl:container mx-auto px-6 md:px-[40px] xl:px-[120px]', className)}
+            className={cn('xl:container mx-auto px-3 md:px-[40px] xl:px-[120px]', className)}
             {...rest}
          />
       </>
@@ -22,11 +22,7 @@ function Container({ As: Component = 'div', ...props }) {
 }
 export default Container
 
-
 // export default function Container(props: ComponentProps<keyof HTMLElementTagNameMap> & {As?: keyof JSX.IntrinsicElements}) {
-
-
-
 
 // ----------------------- old implementation -------------------------------
 // import cn from '@/lib/cn'

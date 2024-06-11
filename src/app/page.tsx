@@ -11,6 +11,8 @@ import { inter, poppins } from '@/fonts'
 import Container from '@/components/layout/container'
 import Flex from '@/components/layout/flex'
 import FlashSaleSection from '@/components/page/home/flash-sale-section'
+import BestSellingProductsSection from '@/components/page/home/best-selling-product-section'
+import ProductCategory from '@/components/page/home/product-category'
 
 export const dynamic = 'force-dynamic'
 
@@ -25,6 +27,8 @@ export default function Home() {
          </Container>
          <Flex dir='col'>
             <FlashSaleSection />
+            <ProductCategory />
+            <BestSellingProductsSection />
          </Flex>
       </main>
    )
