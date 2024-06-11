@@ -14,3 +14,24 @@ export type Product = {
    rating: number
    total_rating_feedbacks: number
 }
+
+export type VoidElement =
+   | 'area'
+   | 'base'
+   | 'br'
+   | 'col'
+   | 'hr'
+   | 'img'
+   | 'input'
+   | 'link'
+   | 'meta'
+   | 'param'
+   | 'command'
+   | 'keygen'
+   | 'source'
+
+export type OmitChildrenFromVoid<C extends React.ElementType> = C extends VoidElement
+   ? Omit<React.ComponentPropsWithRef<C>, 'children'>
+   : React.ComponentPropsWithRef<C>
+
+export type DistributiveOmit<T, K extends keyof any> = T extends any ? Omit<T, K> : never
