@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import ReactQueryProvider from '@/components/wrapper/react-query-provider'
+import Footer from '@/components/layout/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
             <ReactQueryProvider>
                <Header />
                {children}
+               <Footer />
             </ReactQueryProvider>
          </body>
       </html>

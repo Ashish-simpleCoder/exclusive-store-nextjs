@@ -8,7 +8,6 @@ import Flex from '@components/layout/flex'
 import DecorationTag from '@components/ui/decoration-tag'
 
 export default function NewArrival() {
-
    return (
       <Container className='flex flex-col py-16 w-full relative'>
          <DecorationTag>Featured</DecorationTag>
