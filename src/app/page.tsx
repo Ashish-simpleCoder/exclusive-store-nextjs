@@ -1,11 +1,11 @@
+import type { Product } from './api/get-banner-product/route'
+
 import cn from '@/lib/cn'
 import Link from 'next/link'
 import Image from 'next/image'
 
 import Carousel from '@/components/common/carousel'
-
 import { BsArrowRight } from 'react-icons/bs'
-import type { Product } from './api/get-banner-product/route'
 import AppErrorBoundary from '@/components/wrapper/app-error-boundary'
 import { inter, poppins } from '@/fonts'
 import Container from '@/components/layout/container'
