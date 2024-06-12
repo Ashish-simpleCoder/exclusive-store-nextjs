@@ -37,7 +37,7 @@ export default function MobileHeader() {
 
    return (
       <>
-         <RouteChangeListener cb={() => setShouldNav(false)} />
+         <RouteChangeListener cb={hideNav} />
          <If condition={shouldDisplay}>
             <Hamburger
                isActive={shouldShowNav}
