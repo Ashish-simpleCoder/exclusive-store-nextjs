@@ -52,7 +52,7 @@ export function CartActions({ className }: { className?: string }) {
                type='text'
                id='search-product-input'
                placeholder='What are you looking for?'
-               className={poppins.className + ' rounded-md relative bg-[#F5F5F5] px-5 py-2 w-[243px] text-xs'}
+               className={poppins.className + ' rounded-md relative bg-[#F5F5F5] px-5 py-2 w-[243px] text-xs h-[38px]'}
             />
             <button className='absolute right-5 top-1/2 -translate-y-1/2'>
                <VisuallyHidden>Search Product Button</VisuallyHidden>
