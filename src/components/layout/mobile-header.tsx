@@ -9,6 +9,7 @@ import cn from '@/lib/cn'
 import { getScrollBarWidth } from '@/utils/get-scrollbar-width'
 import Hamburger from '../ui/hamburger'
 import { AppLinks } from './header'
+import RouteChangeListener from '../utility/route-change-listener'
 
 export default function MobileHeader() {
    const shouldDisplay = useWindowWidth(() => window.innerWidth < 1024)
@@ -36,6 +37,7 @@ export default function MobileHeader() {
 
    return (
       <>
+         <RouteChangeListener cb={() => setShouldNav(false)} />
          <If condition={shouldDisplay}>
             <Hamburger
                isActive={shouldShowNav}
