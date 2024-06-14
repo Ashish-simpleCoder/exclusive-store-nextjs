@@ -10,8 +10,6 @@ import Container from '@components/layout/container'
 import { LeftArrow, RightArrow } from '@components/ui/right-arrow'
 import AppSwiper from '@components/common/app-swiper'
 import ProductCard from '@components/common/product-card'
-import Badge from '@components/ui/badge'
-import StarRating from '@/components/common/star-rating'
 import Button from '@/components/ui/button-3'
 
 // server actions
@@ -48,9 +46,15 @@ export default function BestSellingProductsSection() {
          <AppSwiper nextEl={'.bs-b2'} prevEl={'.bs-b1'}>
             {data?.map((item) => {
                return (
-                  <ProductCard key={item.id} onCartClick={() => {}} product={item}>
-                     <Badge className='absolute top-3 left-3'>{item.discount_percent}%</Badge>
-                     <StarRating rating_level={item.rating} total_rating_feedbacks={item.total_rating_feedbacks} />
+                  <ProductCard key={item.id} product={item}>
+                     <div className='relative'>
+                        <ProductCard.Img />
+                        <ProductCard.CartButton />
+                     </div>
+                     <ProductCard.Title />
+                     <ProductCard.PriceSection />
+                     <ProductCard.Badge />
+                     <ProductCard.StarRating />
                   </ProductCard>
                )
             })}
