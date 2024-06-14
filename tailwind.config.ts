@@ -14,12 +14,12 @@ const config: Config = {
          },
          backgroundColor: {
             red: {
-               secondary: '#DB4444',
+               secondary: '#C93E3E',
             },
          },
          colors: {
             red: {
-               secondary: '#DB4444',
+               secondary: '#C93E3E',
             },
          },
       },

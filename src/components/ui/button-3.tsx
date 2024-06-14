@@ -24,7 +24,7 @@ function Button({ As: Component = 'button', ...props }) {
    const { className, theme = 'red', variant = 'filled', size = 'default', ...rest } = props
 
    const themes: Record<Theme, ClassValue> = {
-      red: variant == 'filled' ? 'bg-[#DB4444]' : '',
+      red: variant == 'filled' ? 'bg-red-secondary' : '',
       green: variant == 'filled' ? 'bg-[#0c902d]' : '',
       blue: variant == 'filled' ? 'bg-[#0821ae]' : '',
    }

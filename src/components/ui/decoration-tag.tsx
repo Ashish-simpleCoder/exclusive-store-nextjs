@@ -17,7 +17,7 @@ export default function DecorationTag(props: ComponentPropsWithoutRef<'div'> & {
          {...rest}
       >
          <div className='bg-red-secondary h-10 w-5 rounded-[0.25rem]'></div>
-         {children}
+         <span>{children}</span>
       </div>
    )
 }

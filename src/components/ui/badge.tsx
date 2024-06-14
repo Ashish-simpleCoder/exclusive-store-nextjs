@@ -10,7 +10,7 @@ export default function Badge(props: ComponentProps<'div'> & { theme?: Theme }) 
    const { children, className, theme = 'red', ...rest } = props
 
    const themes: Record<Theme, ClassValue> = {
-      red: 'bg-[#DB4444]',
+      red: 'bg-red-secondary',
       green: 'bg-[#0c902d]',
       blue: 'bg-[#0821ae]',
    }
@@ -25,7 +25,7 @@ export default function Badge(props: ComponentProps<'div'> & { theme?: Theme }) 
          )}
          {...rest}
       >
-         {children}
+         <span>{children}</span>
       </div>
    )
 }
