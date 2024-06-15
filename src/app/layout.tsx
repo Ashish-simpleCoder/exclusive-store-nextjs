@@ -1,11 +1,11 @@
-import Header from '@/components/layout/header'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+
+import Header from '@/components/layout/header'
 import ReactQueryProvider from '@/components/wrapper/react-query-provider'
 import Footer from '@/components/layout/footer'
+import { inter } from '@/fonts'
 
-const inter = Inter({ subsets: ['latin'] })
+import './globals.css'
 
 export const metadata: Metadata = {
    title: 'Exclusive Store',

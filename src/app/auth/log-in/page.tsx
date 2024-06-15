@@ -1,8 +1,14 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 
 import Inputs from '@/components/page/auth/inputs'
 import Button from '@/components/ui/button-3'
 import { inter, poppins } from '@/fonts'
+
+export const metadata: Metadata = {
+   title: 'Exclusive | Login',
+   description: 'Login to Exclusive',
+}
 
 export default function Login() {
    return (
