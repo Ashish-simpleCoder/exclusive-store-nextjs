@@ -43,7 +43,7 @@ export function AppLinks({ className }: { className?: string }) {
 
 export function CartActions({ className }: { className?: string }) {
    return (
-      <div className={cn('actions gap-2 lg:gap-6 hidden lg:flex', className)}>
+      <div className={cn('actions gap-2 lg:gap-6 hidden lg:flex items-center', className)}>
          <div className='relative '>
             <VisuallyHidden as='label' htmlFor='search-product-input'>
                Search Product
@@ -60,10 +60,10 @@ export function CartActions({ className }: { className?: string }) {
             </button>
          </div>
 
-         <button title='Wish List Items Page'>
+         <Link href='/wish-list' title='Wish List'>
             <VisuallyHidden>Wish List Items Page</VisuallyHidden>
             <HiOutlineHeart size='24' />
-         </button>
+         </Link>
          <button title='Cart Items Page'>
             <VisuallyHidden>Cart Items Page</VisuallyHidden>
             <HiOutlineShoppingCart size='24' />
