@@ -16,7 +16,7 @@ export default function WishListPage() {
 
    return (
       <main className='flex min-h-screen flex-col items-center'>
-         <Container As='section' className='py-10'>
+         <Container As='section' className='w-full py-10'>
             <div className='heading w-full flex justify-between items-center mb-16'>
                <h2 className={`${poppins.className} text-xl`}>Wishlist ({items})</h2>
                <If condition={items > 0}>
