@@ -52,7 +52,7 @@ export default function MobileHeader() {
                }}
             />
          </If>
-         <If condition={shouldShowNav}>
+         <If condition={shouldDisplay && shouldShowNav}>
             <nav className={cn('fixed inset-0 bg-[#e9e9e9] flex flex-col z-[2]')} style={{ top: top + 'px' }}>
                <AppLinks className='flex flex-col gap-2 overflow-y-auto px-2 py-4 ' />
                {/* <CartActions className='flex flex-col gap-2' /> */}
