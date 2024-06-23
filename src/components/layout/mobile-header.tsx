@@ -12,6 +12,7 @@ import Hamburger from '../ui/hamburger'
 import { AppLinks } from './header'
 import RouteChangeListener from '../utility/route-change-listener'
 import VisuallyHidden from '../ui/visually-hidden'
+import { useSyncedEffect } from 'classic-react-hooks'
 
 export default function MobileHeader() {
    const shouldDisplay = useWindowWidth(() => window.innerWidth < 1024)
@@ -31,11 +32,20 @@ export default function MobileHeader() {
    }
    const hideNav = () => {
       setShouldNav(false)
+      removeCls()
+   }
+
+   const removeCls = () => {
       document.body.style.removeProperty('overflow')
       document.body.style.removeProperty('overscroll-behavior')
       document.body.style.removeProperty('position')
       document.body.style.removeProperty('margin-right')
    }
+   useSyncedEffect(() => {
+      if (!shouldDisplay) {
+         removeCls()
+      }
+   }, [shouldDisplay])
 
    return (
       <>
