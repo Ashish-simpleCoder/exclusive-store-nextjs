@@ -1,61 +1,16 @@
-const products = [
-   {
-      id: 1,
-      price: 120,
-      old_price: 160,
-      discount_percent: 40,
-      rating: 5,
-      total_rating_feedbacks: 45,
-      title: 'HAVIT HV-G92 Gamepad',
-      image: '/gamepad.png',
-      quantity: 2,
-   },
-   {
-      id: 2,
-      price: 960,
-      old_price: 1160,
-      discount_percent: 35,
-      rating: 4,
-      total_rating_feedbacks: 63,
-      title: 'AK-900 Wired Keyboard',
-      image: '/keyboard.png',
-      quantity: 5,
-   },
-   {
-      id: 3,
-      price: 370,
-      old_price: 400,
-      discount_percent: 30,
-      rating: 4.5,
-      total_rating_feedbacks: 200,
-      title: 'IPS LCD Gaming Monitor',
-      image: '/moniter.png',
-      quantity: 6,
-   },
-   {
-      id: 4,
-      price: 375,
-      old_price: 400,
-      discount_percent: 25,
-      rating: 4,
-      total_rating_feedbacks: 344,
-      title: 'S-Series Comfort Chair',
-      image: '/chair.png',
-      quantity: 1,
-   },
-   {
-      id: 5,
-      price: 960,
-      old_price: 1160,
-      discount_percent: 40,
-      rating: 4,
-      total_rating_feedbacks: 203,
-      title: 'Gucci duffle bag',
-      image: '/woman-purse.png',
-      quantity: 3,
-   },
-]
+import fs from 'node:fs'
 
 export default async function getCart() {
-   return products
+   const cart = fs.readFileSync(process.cwd() + '/src/server-actions/cart.json')
+   return JSON.parse(cart.toString()) as {
+      id: number
+      price: number
+      old_price: number
+      discount_percent: number
+      rating: number
+      total_rating_feedbacks: number
+      title: string
+      image: string
+      quantity: number
+   }[]
 }

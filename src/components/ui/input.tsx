@@ -3,19 +3,25 @@
 import { poppins } from '@/fonts'
 import cn from '@/lib/cn'
 import emotionStyled from '@emotion/styled'
-import { ComponentPropsWithoutRef, ElementRef, forwardRef, useId } from 'react'
+import { ChangeEventHandler, ComponentPropsWithoutRef, ElementRef, forwardRef, useId } from 'react'
 
 type InputProps = ComponentPropsWithoutRef<'input'> & {
    variant?: 'floating' | 'default'
    label?: string
+} & {
+   handleChange?: (id: number, value: number) => void
 }
 
 // eslint-disable-next-line react/display-name
 const Input = forwardRef<ElementRef<'input'>, InputProps>((props: InputProps, ref) => {
-   const { variant = 'default', label, className, id: inputId, value, ...rest } = props
+   const { variant = 'default', label, className, id: inputId, value, handleChange, ...rest } = props
    const id = useId()
 
    // [&:valid+label]:-translate-y-[24px]
+   const onChange: ChangeEventHandler<HTMLInputElement> = (e) => {
+      // @ts-ignore
+      handleChange(+e.target.getAttribute('data-id'), +e.target.value)
+   }
 
    if (variant == 'floating') {
       return (
@@ -29,6 +35,7 @@ const Input = forwardRef<ElementRef<'input'>, InputProps>((props: InputProps, re
                   className
                )}
                ref={ref}
+               onChange={onChange}
                {...rest}
             />
             <label
@@ -41,7 +48,17 @@ const Input = forwardRef<ElementRef<'input'>, InputProps>((props: InputProps, re
       )
    }
 
-   return <input type='text' />
+   return (
+      <input
+         type='text'
+         className={cn(className)}
+         id={id + ' ' + inputId}
+         ref={ref}
+         value={value}
+         onChange={onChange}
+         {...rest}
+      />
+   )
 })
 export default Input
 
