@@ -34,7 +34,7 @@ function Button({ As: Component = 'button', ...props }) {
          // @ts-ignore
          className={cn(
             poppins.className,
-            'text-[#FAFAFA] text-sm lg:text-base rounded-[0.25rem] px-10 py-3 lg:px-12 lg:py-4 hover:bg-opacity-90 hover:text-opacity-90 transition-opacity',
+            'text-[#FAFAFA] text-sm lg:text-base rounded-[0.25rem] px-3 md:px-10 py-3 lg:px-12 lg:py-4 hover:bg-opacity-90 hover:text-opacity-90 transition-opacity',
             themes[theme as Theme],
             variant == 'outlined' && 'text-black border-[1px] border-black border-opacity-50',
             size == 'sm' && 'text-sm py-[0.40rem] lg:py-[0.65rem]',

@@ -43,3 +43,13 @@ body {
    opacity: 0.5;
    cursor: not-allowed;
 }
+
+input[type='number'] {
+   /*for absolutely positioning spinners*/
+   position: relative;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+   opacity: 1;
+}

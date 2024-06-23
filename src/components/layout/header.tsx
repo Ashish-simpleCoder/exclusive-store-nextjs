@@ -64,10 +64,10 @@ export function CartActions({ className }: { className?: string }) {
             <VisuallyHidden>Wish List Items Page</VisuallyHidden>
             <HiOutlineHeart size='24' />
          </Link>
-         <button title='Cart Items Page'>
+         <Link href='/cart' title='Cart'>
             <VisuallyHidden>Cart Items Page</VisuallyHidden>
             <HiOutlineShoppingCart size='24' />
-         </button>
+         </Link>
       </div>
    )
 }

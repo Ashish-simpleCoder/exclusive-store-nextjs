@@ -3,6 +3,7 @@
 import { If } from 'classic-react-components'
 import { useState } from 'react'
 import { HiOutlineHeart, HiOutlineShoppingCart } from 'react-icons/hi2'
+import Link from 'next/link'
 
 import useWindowWidth from '@/hooks/use-window-width'
 import cn from '@/lib/cn'
@@ -10,6 +11,7 @@ import { getScrollBarWidth } from '@/utils/get-scrollbar-width'
 import Hamburger from '../ui/hamburger'
 import { AppLinks } from './header'
 import RouteChangeListener from '../utility/route-change-listener'
+import VisuallyHidden from '../ui/visually-hidden'
 
 export default function MobileHeader() {
    const shouldDisplay = useWindowWidth(() => window.innerWidth < 1024)
@@ -55,12 +57,14 @@ export default function MobileHeader() {
                <AppLinks className='flex flex-col gap-2 overflow-y-auto px-2 py-4 ' />
                {/* <CartActions className='flex flex-col gap-2' /> */}
                <div className='mt-auto flex gap-2 px-2 py-4'>
-                  <button>
+                  <Link href='/wish-list' title='Wish List'>
+                     <VisuallyHidden>Wish List Items Page</VisuallyHidden>
                      <HiOutlineHeart size='24' />
-                  </button>
-                  <button>
+                  </Link>
+                  <Link href='/cart' title='Cart'>
+                     <VisuallyHidden>Cart Items Page</VisuallyHidden>
                      <HiOutlineShoppingCart size='24' />
-                  </button>
+                  </Link>
                </div>
             </nav>
          </If>
