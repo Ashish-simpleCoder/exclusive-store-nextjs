@@ -31,7 +31,7 @@ export function AppLinks({ className }: { className?: string }) {
          <Link href='/' className={poppins.className}>
             Contact
          </Link>
-         <Link href='/' className={poppins.className}>
+         <Link href='/about' className={poppins.className}>
             About
          </Link>
          <Link href='/auth/sign-up' className={poppins.className}>
