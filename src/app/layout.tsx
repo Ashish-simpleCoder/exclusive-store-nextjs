@@ -10,6 +10,7 @@ import './globals.css'
 export const metadata: Metadata = {
    title: 'Exclusive Store',
    description: 'Exclusive Store made in NextJS',
+   icons: '/cart-fav.svg',
 }
 
 export default function RootLayout({

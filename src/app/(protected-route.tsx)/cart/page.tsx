@@ -15,6 +15,7 @@ import { handleCartCountChange } from '@/server-actions/update-cart-count'
 export const metadata: Metadata = {
    title: 'Exclusive | Cart',
    description: 'Cart Products',
+   icons: '/cart-fav.svg',
 }
 export const dynamic = 'force-dynamic'
 

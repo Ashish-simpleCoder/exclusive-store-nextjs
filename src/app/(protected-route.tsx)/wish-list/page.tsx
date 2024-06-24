@@ -9,6 +9,7 @@ import { poppins } from '@/fonts'
 export const metadata: Metadata = {
    title: 'Exclusive | WishList',
    description: 'WishList Products',
+   icons: '/cart-fav.svg',
 }
 
 export default function WishListPage() {

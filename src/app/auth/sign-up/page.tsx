@@ -9,13 +9,14 @@ import { inter, poppins } from '@/fonts'
 export const metadata: Metadata = {
    title: 'Exclusive | Sign Up',
    description: 'Sign Up to Exclusive',
+   icons: '/cart-fav.svg',
 }
 
 export default function SignUp() {
    return (
       <div className='sign-up-form flex flex-col justify-center gap-9 lg:gap-12'>
          <div className='heading flex flex-col gap-3 lg:gap-6'>
-            <h2 className={`${inter.className} text-2xl xl:text-4xl leading-[30px] tracking-wide`}>
+            <h2 className={`${inter.className} text-2xl xl:text-4xl leading-[30px] tracking-wide  whitespace-nowrap`}>
                Create an account
             </h2>
             <h2 className={`${poppins.className}`}>Enter your details below</h2>
